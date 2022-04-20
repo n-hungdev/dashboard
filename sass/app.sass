@@ -1,0 +1,370 @@
+@import './_valiable'
+@import './_reset'
+/* sass sass/app.sass css/app.css --watch  */
+
+.profile-photo
+  width: 2.8rem
+  height: 2.8rem
+  border-radius: 50%
+  overflow: hidden
+  
+.container
+  display: grid
+  width: 96%
+  margin: 0 auto
+  gap: 1.8rem
+  grid-template-columns: 14rem auto 23rem
+aside
+  height: 100vh
+  .top
+    background: var(--color-white)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 1.4rem
+    .logo 
+      display: flex
+      gap: .8rem
+      img
+        width: 2rem
+        height: 2rem
+    .close
+      display: none
+/* --------- SideBar --------- */
+.sidebar
+  position: relative
+  //background: var(--color-white)
+  display: flex
+  flex-direction: column
+  height: 86vh
+  top: 3rem
+  a
+    position: relative
+    display: flex
+    align-items: center
+    gap: 1rem
+    margin-left: 2rem
+    height: 3.7rem
+    color: var(--color-info-dark)
+    transition: all .3s ease
+    &:hover
+      color: var(--color-danger)
+      i
+        transition: all .2s ease
+        margin-left: 1rem
+    &:last-child
+      position: absolute
+      width: 100%
+      bottom: 1rem
+    h3
+      font-weight: 500
+    i
+      font-size: 1.6rem
+      transition: all .1s ease
+    .message-count
+      background: var(--color-danger)
+      color: var(--color-white)
+      padding: 2px 10px
+      border-radius: var(--border-radius-1)
+
+.sidebar a.active
+  background: var(--color-light)
+  color: var(--color-primary)
+  margin-left: 0
+  transition: all .3s ease
+  i
+    color: var(--color-primary)
+    margin-left: calc( 1rem - 3px )
+  &::before
+    content: ''
+    width: 6px
+    height: 100%
+    background: var(--color-primary)
+/* Main */
+main 
+  margin-top: 1.4rem
+  .date
+    display: inline-block
+    background: var(--color-light)
+    border-radius: var(--border-radius-1)
+    margin-top: 1rem
+  .insights
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    gap: 1.6rem
+    > div
+      background: var(--color-white)
+      padding: var(--card-padding)
+      border-radius: var(--card-border-radius)
+      margin-top: 1rem
+      box-shadow: var(--box-shadow)
+      &:hover
+        box-shadow: none
+      i
+        padding: 0.5rem
+        border-radius: 50%
+        color: var(--color-white)
+    svg 
+      width: 7rem
+      height: 7rem
+      circle
+        fill: none
+        stroke: var(--color-primary)
+        stroke-linecap: round
+        stroke-width: 14
+        transform: translate(5px,5px)
+    .middle
+      display: flex
+      align-items: center
+      justify-content: space-between
+    .progress 
+      position: relative
+      width: 92px
+      height: 92px
+      border-radius: 50%
+      .number
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        font-weight: 700
+/* ----- */
+main .insights
+  .sales
+    i
+      background: var(--color-primary)
+    svg circle
+      stroke-dasharray: 200
+      stroke-dashoffset: -30
+  .expenses
+    i
+      background: var(--color-success)
+    svg circle
+      stroke-dasharray: 80
+      stroke-dashoffset: 0
+  .income
+    i
+      background: var(--color-warning)
+    svg circle
+      stroke-dasharray: 113
+      stroke-dashoffset: 70
+/* --------------------- */
+main .recent-order 
+  margin-top: 2rem
+  h2
+    margin-bottom: 0.8rem
+  table
+    background: var(--color-white)
+    width: 100%
+    border-radius: 16px
+    padding: var(--card-padding)
+    text-align: center
+    box-shadow: var(--box-shadow)
+    transition: all .3s ease
+    &:hover
+      box-shadow: none
+    tbody td
+        height: 2.8rem
+        border-bottom: 1px solid var(--color-light)
+        color: var(--color-dark-variant)
+    tbody tr
+      &:last-child td
+        border: none
+  a
+    text-align: center
+    display: block
+    margin: 1rem auto
+    color: var(--color-primary)
+
+.right
+  margin-top: 1.4rem
+  .top
+    display: flex
+    justify-content: end
+    gap: 2rem
+    button
+      display: none
+    .theme-toggler
+      background: var(--color-light)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 1.6rem
+      width: 4.2rem
+      cursor: pointer
+      border-radius: var(--border-radius-1)
+      i
+        font-size: 1.2rem
+        width: 50%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+      i.active
+        background: var(--color-primary)
+        color: var(--color-white)
+        border-radius: var(--border-radius-1)
+    .profile
+      display: flex
+      gap: 2rem
+      text-align: right
+  .recent-updates
+    margin-top: 1rem
+    h2
+      margin-bottom: 0.8rem
+    .updates
+      background: var(--color-white)
+      padding: var(--card-padding)
+      border-radius: var(--card-border-radius)
+      box-shadow: var(--box-shadow)
+      transition: all .3s ease
+      &:hover
+        box-shadow: none
+      .update
+        display: grid
+        grid-template-columns: 2.6rem auto
+        gap: 1rem
+        margin-bottom: 1rem
+  .sales-analytics
+    margin-top: 2rem
+    h2
+      margin-bottom: 0.8rem
+    .item
+      background: var(--color-white)
+      display: flex
+      align-items: center
+      gap: 1rem
+      margin-bottom: 0.7rem
+      padding: 1.4rem var(--card-padding)
+      border-radius: var(--border-radius-3)
+      box-shadow: var(--box-shadow)
+      transition: all .3s ease
+      &:hover
+        box-shadow: none
+      .right
+        display: flex
+        justify-content: space-between
+        align-items: start
+        margin: 0
+        width: 100%
+      .icon
+        padding: .6rem
+        color: white
+        border-radius: 100rem
+        font-size: 1.4rem
+    .online .icon
+      background: var(--color-primary)
+    .offices .icon
+      background: var(--color-warning)
+    .customers .icon
+      background: var(--color-success)
+
+
+.show-menu
+  left: 0rem
+  transition: all .3s ease
+
+@media screen and ( max-width:  1200px)
+  .container
+    width: 94%
+    grid-template-columns: 7rem auto 23rem
+  aside 
+    .logo h2
+      display: none
+    .sidebar 
+      h3
+        display: none
+      a
+        width: 5.6rem
+        &:last-child
+          position: relative
+          margin-top: 1.8rem
+  main
+    .insights
+      grid-template-columns: 1fr 
+      gap: .5rem
+    .recent-order
+      width: 94%
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      margin: 2rem 0 0 8.8rem
+      table
+        width: 100%
+@media screen and ( max-width: 768px )
+  .container
+    width: 100%
+    grid-template-columns: 1fr
+  aside
+    position: fixed
+    left: -100%
+    background: var(--color-white)
+    width: 18rem
+    z-index: 3
+    box-shadow: 1rem 3rem 4rem var(--color-light)
+    height: 100vh
+    padding-right: var(--card-padding)
+    transition: all .3s ease
+    .top .close
+      display: inline-block
+      font-size: 1.8rem
+    .logo 
+      margin-left: 1rem
+      h2
+        display: inline
+    .sidebar 
+      h3
+        display: block
+      a
+        width: 100%
+        height: 3.4rem
+        &:last-child
+          position: absolute
+          bottom: 5rem
+  main
+    margin-top: 2rem
+    padding: 0  1rem
+    .recent-order
+      position: relative
+      margin: 3rem 0 0 0
+      width: 100%
+      table
+        width: 100%
+        margin: 0
+  .right
+    width: 94%
+    margin: 0 auto 4rem
+    .top
+      position: fixed
+      top: 0
+      left: 0
+      align-items: center
+      padding:1rem
+      background: var(--color-white)
+      width: 100%
+      z-index: 2
+      box-shadow: none
+      .theme-toggler
+        width: 4.4rem
+        position: absolute
+        left: 65%
+      button
+        position: absolute
+        left: 2rem
+        display: inline-block
+        cursor: pointer
+        border-radius: 4px
+        i
+          font-size: 1.8rem
+    .profile .info
+      display: none
+
+
+
+
+
+
+
+
+
+

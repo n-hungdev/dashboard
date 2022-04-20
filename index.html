@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DashBoard</title>
+		<!-- Box Icon -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/app.css" />
+		<style></style>
+	</head>
+	<body>
+		<div class="container">
+			<aside>
+				<div class="top">
+					<div class="logo">
+						<img src="./images/logo.jpg" alt="" />
+						<h2>DAH<span class="danger">.io</span></h2>
+					</div>
+					<div class="close" id="close-btn">
+						<i class="bx bx-x"></i>
+					</div>
+				</div>
+				<!-- ---------------------------- -->
+				<div class="sidebar">
+					<a href="#" class="active">
+						<i class="bx bx-grid-alt"></i>
+						<h3>Dashboard</h3>
+					</a>
+					<a href="#">
+						<i class="bx bx-user-circle"></i>
+						<h3>Customers</h3>
+					</a>
+					<a href="#">
+						<i class="bx bx-receipt"></i>
+						<h3>Orders</h3>
+					</a>
+					<a href="#">
+						<i class="bx bx-line-chart"></i>
+						<h3>Analytics</h3>
+					</a>
+					<a href="#">
+						<i class="bx bxl-gmail"></i>
+						<h3>Messages</h3>
+						<span class="message-count">21</span>
+					</a>
+					<a href="#">
+						<i class="bx bx-notepad"></i>
+						<h3>Products</h3>
+					</a>
+					<a href="#">
+						<i class="bx bxs-report"></i>
+						<h3>Reports</h3>
+					</a>
+					<a href="#">
+						<i class="bx bxs-virus"></i>
+						<h3>Setting</h3>
+					</a>
+					<a href="#">
+						<i class="bx bx-plus"></i>
+						<h3>Add Product</h3>
+					</a>
+					<a href="#">
+						<i class="bx bx-log-out bx-rotate-180"></i>
+						<h3>Log Out</h3>
+					</a>
+				</div>
+			</aside>
+			<main>
+				<h1>DashBoard</h1>
+				<div class="date">
+					<input type="date" name="" id="" />
+				</div>
+
+				<div class="insights">
+					<div class="sales">
+						<i class="bx bxs-book-content"></i>
+						<div class="middle">
+							<div class="left">
+								<h3>Total Sales</h3>
+								<h1>$50.025</h1>
+							</div>
+							<div class="progress">
+								<svg>
+									<circle cx="38" cy="38" r="36"></circle>
+								</svg>
+								<div class="number">
+									<p>80%</p>
+								</div>
+							</div>
+						</div>
+						<small class="text-muted">last 24 house</small>
+					</div>
+					<!-- -------- -->
+					<div class="expenses">
+						<i class="bx bxs-book-content"></i>
+						<div class="middle">
+							<div class="left">
+								<h3>Total Sales</h3>
+								<h1>$50.025</h1>
+							</div>
+							<div class="progress">
+								<svg>
+									<circle cx="38" cy="38" r="36"></circle>
+								</svg>
+								<div class="number">
+									<p>80%</p>
+								</div>
+							</div>
+						</div>
+						<small class="text-muted">last 24 house</small>
+					</div>
+					<!-- --------- -->
+					<div class="income">
+						<i class="bx bxs-book-content"></i>
+						<div class="middle">
+							<div class="left">
+								<h3>Total Sales</h3>
+								<h1>$50.025</h1>
+							</div>
+							<div class="progress">
+								<svg>
+									<circle cx="38" cy="38" r="36"></circle>
+								</svg>
+								<div class="number">
+									<p>80%</p>
+								</div>
+							</div>
+						</div>
+						<small class="text-muted">last 24 house</small>
+					</div>
+				</div>
+				<!-- ------------------- -->
+				<div class="recent-order">
+					<h2>Recent Order</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Product Name</th>
+								<th>Product Number</th>
+								<th>Payment</th>
+								<th>Status</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Foldable Mini Drone</td>
+								<td>85859</td>
+								<td>Due</td>
+								<td class="warning">Pending</td>
+								<td class="primary">Details</td>
+							</tr>
+							<tr>
+								<td>Foldable Mini Drone</td>
+								<td>85859</td>
+								<td>Due</td>
+								<td class="warning">Pending</td>
+								<td class="primary">Details</td>
+							</tr>
+							<tr>
+								<td>Foldable Mini Drone</td>
+								<td>85859</td>
+								<td>Due</td>
+								<td class="warning">Pending</td>
+								<td class="primary">Details</td>
+							</tr>
+							<tr>
+								<td>Foldable Mini Drone</td>
+								<td>85859</td>
+								<td>Due</td>
+								<td class="warning">Pending</td>
+								<td class="primary">Details</td>
+							</tr>
+							<tr>
+								<td>Foldable Mini Drone</td>
+								<td>85859</td>
+								<td>Due</td>
+								<td class="warning">Pending</td>
+								<td class="primary">Details</td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="#">Show All</a>
+				</div>
+			</main>
+			<!-- ------------------ -->
+			<div class="right">
+				<div class="top">
+					<button id="menu-btn">
+						<i class="bx bx-menu"></i>
+					</button>
+					<div class="theme-toggler">
+						<i class="bx bxs-sun active"></i>
+						<i class="bx bxs-moon"></i>
+					</div>
+					<div class="profile">
+						<div class="info">
+							<p>Hey, <b>Daniel</b></p>
+							<small class="text-muted">Admin</small>
+						</div>
+						<div class="profile-photo">
+							<img src="./images/user-avatar.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<div class="recent-updates">
+					<h2>Recent Updates</h2>
+					<div class="updates">
+						<div class="update">
+							<div class="profile-photo">
+								<img src="./images/user-avatar.png" alt="" />
+							</div>
+							<div class="message">
+								<p><b>Hung</b>sssssssssssssssssssss</p>
+								<small class="text-muted">2 Minutes Ago</small>
+							</div>
+						</div>
+						<div class="update">
+							<div class="profile-photo">
+								<img src="./images/user-avatar.png" alt="" />
+							</div>
+							<div class="message">
+								<p><b>Hung</b>sssssssssssssssssssss</p>
+								<small class="text-muted">2 Minutes Ago</small>
+							</div>
+						</div>
+						<div class="update">
+							<div class="profile-photo">
+								<img src="./images/user-avatar.png" alt="" />
+							</div>
+							<div class="message">
+								<p><b>Hung</b>sssssssssssssssssssss</p>
+								<small class="text-muted">2 Minutes Ago</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<div class="sales-analytics">
+					<h2>Sales Analytics</h2>
+					<div class="item online">
+						<div class="icon"><i class="bx bxs-cart"></i></div>
+						<div class="right">
+							<div class="info">
+								<h3>ONLINE ORDERS</h3>
+								<small class="text-muted">Last 24 Hours</small>
+							</div>
+							<h5 class="success">+37%</h5>
+							<h3>3648</h3>
+						</div>
+					</div>
+					<div class="item customers">
+						<div class="icon"><i class="bx bxs-cart"></i></div>
+						<div class="right">
+							<div class="info">
+								<h3>ONLINE ORDERS</h3>
+								<small class="text-muted">Last 24 Hours</small>
+							</div>
+							<h5 class="success">+37%</h5>
+							<h3>3648</h3>
+						</div>
+					</div>
+					<div class="item offices">
+						<div class="icon"><i class="bx bxs-cart"></i></div>
+						<div class="right">
+							<div class="info">
+								<h3>ONLINE ORDERS</h3>
+								<small class="text-muted">Last 24 Hours</small>
+							</div>
+							<h5 class="danger">-17%</h5>
+							<h3>3648</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
